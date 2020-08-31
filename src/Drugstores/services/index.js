@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 const baseUrl = 'https://backend-consorcio.herokuapp.com/api/'
+console.log(baseUrl)
 const baseULComuna = 'https://midastest.minsal.cl/farmacias/maps/index.php/utilidades/maps_obtener_comunas_por_regiones'
 
 export async function getStores (data) {
