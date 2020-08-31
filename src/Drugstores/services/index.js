@@ -1,12 +1,12 @@
 import axios from 'axios'
 
-const baseUrl = process.env.REACT_APP_BASE_URL
+const baseUrl = 'https://backend-consorcio.herokuapp.com/api'
 const baseULComuna = 'https://midastest.minsal.cl/farmacias/maps/index.php/utilidades/maps_obtener_comunas_por_regiones'
 
 export async function getStores (data) {
   try {
     return await axios({
-      url: `${baseUrl}//stores?comuna_nombre=${data.comuna}&local_nombre=${data.local}`,
+      url: `${baseUrl}/stores?comuna_nombre=${data.comuna}&local_nombre=${data.local}`,
       method: 'GET'
     })
   } catch (e) {
